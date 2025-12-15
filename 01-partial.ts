@@ -18,7 +18,7 @@ function updateUser(id: number, fieldsToUpdate: Partial<User>) {
 
 updateUser(1, { email: "nuevo@correo.com" });  // ✅
 updateUser(2, { name: "Ana", isAdmin: false }); // ✅
-updateUser(3, { age: 18 }); // Error: 'age' no existe en 'User'
+// updateUser(3, { age: 18 }); // Error: 'age' no existe en 'User'
 
 // Ejemplo 2: Filtros de Búsqueda Opcionales
 interface ProductFilters {
@@ -34,4 +34,4 @@ function findProducts(filters: Partial<ProductFilters>) {
 
 findProducts({ category: "electrónica" }); // ✅
 findProducts({ minPrice: 100, maxPrice: 500 }); // ✅
-findProducts({ color: "rojo" }); // Error: 'color' no existe en 'ProductFilters'
+// findProducts({ color: "rojo" }); // Error: 'color' no existe en 'ProductFilters'
